@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/migracionesspain-449913/app:$BRANCH_NAME', '.']
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args: ['run', '--filename=kubernetes/', '--location=us-central1', '--cluster=my-cluster']
+images:
+  - 'gcr.io/migracionesspain-449913/app:$BRANCH_NAME'
