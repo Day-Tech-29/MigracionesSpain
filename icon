@@ -1,5 +1,0 @@
-steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/migracionesspain-449913/icon:latest', '.']
-images:
-  - 'gcr.io/migracionesspain-449913/icon:latest'
