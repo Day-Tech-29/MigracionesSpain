@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/migracionesspain-449913/app:release', '.']
+images:
+  - 'gcr.io/migracionesspain-449913/app:release'
